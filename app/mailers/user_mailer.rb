@@ -1,9 +1,9 @@
 class UserMailer < ActionMailer::Base
-    default from: "Laur <laur@getwabbit.com>"
+    default from: "laur@getwabbit.com"
 
     def signup_email(user)
         @user = user
-        @twitter_message = "#Shaving is evolving. Excited for @harrys to launch."
+        @twitter_message = "No more #missed #connections. Excited for @wabbitapp to launch."
 
         mail(:to => user.email, :subject => "Welcome to Wabbit!")
     end

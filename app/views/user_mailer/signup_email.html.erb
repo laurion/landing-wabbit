@@ -8,7 +8,14 @@
     </style>
 </head>
 
-<body style="margin: 0; padding: 0;">
-    test test tesssst
+body>
+  <h1>Welcome to Wabbit!</h1>
+  <p>
+    You have successfully signed up to getwabbit.com
+    Share this link with friends to cut in line on our Waiting List and get early acess to our iOS app.
+    <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
+  </p>
+  <p>Thanks for joining and have a great day!</p>
+  <p> - Laur and the Wabbit Team </p>
 </body>
 </html>
