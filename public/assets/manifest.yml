@@ -9,6 +9,8 @@ pattern.png: pattern-ba9231b16fff97d065006d2ec4e7b9bc.png
 pattern/index.png: pattern-ba9231b16fff97d065006d2ec4e7b9bc.png
 play-btn.svg: play-btn-cc4c461fe13ab09b23bc13a0165209db.svg
 play-btn/index.svg: play-btn-cc4c461fe13ab09b23bc13a0165209db.svg
+shareon.png: shareon-b84f80118d9958d3f28df94aa5fc884d.png
+shareon/index.png: shareon-b84f80118d9958d3f28df94aa5fc884d.png
 switcher/blue.jpg: switcher/blue-e9e7a78cb14dc2f50ba4dbe311b4b1c0.jpg
 switcher/blue/index.jpg: switcher/blue-e9e7a78cb14dc2f50ba4dbe311b4b1c0.jpg
 switcher/color.png: switcher/color-e7ca03c00a322287fd78a3d64c0c8217.png
@@ -33,6 +35,8 @@ switcher/violet.jpg: switcher/violet-9f8ea71238bf70ab9752ba2dd39d8eea.jpg
 switcher/violet/index.jpg: switcher/violet-9f8ea71238bf70ab9752ba2dd39d8eea.jpg
 switcher/yellow.jpg: switcher/yellow-612d8ac446087fb3b0754498f4ac4f13.jpg
 switcher/yellow/index.jpg: switcher/yellow-612d8ac446087fb3b0754498f4ac4f13.jpg
+tweeton.png: tweeton-4320a03e662c7c70aa8e7aa607d7c874.png
+tweeton/index.png: tweeton-4320a03e662c7c70aa8e7aa607d7c874.png
 active_admin.js: active_admin-76495de5f9a0a6af340457a8d11e1130.js
 active_admin/index.js: active_admin-76495de5f9a0a6af340457a8d11e1130.js
 application.js: application-669fc35ba81b3bcacca653b2cbb7f680.js
@@ -89,12 +93,12 @@ video.mov: video-c5ef31d7b88cfd1b3b7d4633bf939834.mov
 video/index.mov: video-c5ef31d7b88cfd1b3b7d4633bf939834.mov
 video.mp4: video-7b4c569e90af60f961066a53664d819f.mp4
 video/index.mp4: video-7b4c569e90af60f961066a53664d819f.mp4
-video.ogg: video-97f4f49202cf39e423c4772f013e4ace.ogg
-video/index.ogg: video-97f4f49202cf39e423c4772f013e4ace.ogg
+video.ogg: video-a668db5db3966a831b3fbcb101cb9eb8.ogg
+video/index.ogg: video-a668db5db3966a831b3fbcb101cb9eb8.ogg
 video.png: video-bf32322b17565d0a89af89d03e96da2b.png
 video/index.png: video-bf32322b17565d0a89af89d03e96da2b.png
-video.webm: video-7f6b2f4b995f0ff8555471069c58bc63.webm
-video/index.webm: video-7f6b2f4b995f0ff8555471069c58bc63.webm
+video.webm: video-126fafb563c59821daa334e95d352219.webm
+video/index.webm: video-126fafb563c59821daa334e95d352219.webm
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-25b05cd8197f7a271d0624853a6dbdd5.png
 active_admin/admin_notes_icon/index.png: active_admin/admin_notes_icon-25b05cd8197f7a271d0624853a6dbdd5.png
 active_admin/datepicker/datepicker-header-bg.png: active_admin/datepicker/datepicker-header-bg-6f0baad739953cb1a0413c031841e82f.png
