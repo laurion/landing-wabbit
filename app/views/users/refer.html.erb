@@ -1,88 +1,205 @@
-<div class="header">
-    <div class="content">
-        <p class="logo brandon">Harry&#8217;s</p>
-        <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
-    </div>
-</div>
+<style>
+/*######################################*/
+/*RESET ################################*/
+/*######################################*/
 
-<div class="hero">
-    <div class="page-content clearfix">
-        <div class="mammoth">
-            <span class="need brandon">Shaving Is<br>Evolving</span>
-        </div>
-        <div class="share-wrap">
-            <p class="why brandon">Don't leave your friends behind</p>
-            <p class="title brandon">INVITE FRIENDS &<br>Earn Product</p>
-            <p class="subtitle brandon">You are #<%= @count %> on our waitlist. Share your unique link via email, Facebook<br>or Twitter and earn Harry's goods for<br>each friend who signs up.</p>
-            <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-            <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
-            <div class="social-links">
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
-                <div class="sep"></div>
-                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
-            </div>
-        </div>
-    </div>
-</div>
+#main {
+  text-align: center;
+}
+header {
+	padding: 1rem 6rem;
+	border-bottom: 3px solid #f0f0f0;
+}
 
-<%
-    referrals_count = @user.referrals.count
+body {
+	font-family: 'Oxygen', 'helvetica-neue', 'helvetica', 'arial', sans-serif;
+	font-weight: 300;
+	color: #535353;
+	-webkit-font-smoothing: antialiased;
+}
 
-    stops = User::REFERRAL_STEPS
+#header-logo{
+	width: 250px;
+}
 
-    found = nil
+.container {
+	margin: 0 auto;
+	max-width: 960px;
+	padding-top: 107px;
+}
 
-    stops.reverse_each { |stop|
-        if stop["count"] <= referrals_count and !found
-            stop["selected"] = true
-            found = stop
-        else
-            stop["selected"] = false
-        end
-    }
- %>
-<div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
-    <div class="page-content">
-        <p class="callout brandon">Here's How It Works:</p>
-        <ul class="products clearfix">
-            <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
-            <% stops.each do |stop| %>
-                <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-                    <div class="circle"><%= stop["count"] %></div>
-                    <div class="sep"></div>
-                    <p><%= stop["html"].html_safe %></p>
+.screenshot {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 458px;
+}
 
-                    <div class="tooltip">
-                        <img src="<%= stop["image"] %>" height="254">
-                    </div>
-                </li>
-            <% end %>
-        </ul>
+.column-adjust-top-margin {
+	margin-top: -8rem;
+}
 
-        <div class="progress">
-            <div class="mover">
-                <div class="bar clearfix"></div>
-            </div>
-        </div>
+.container input {
+	margin-bottom: 3rem;
+}
 
-        <%
-            words = ''
-            if referrals_count == 1
-                words = 'friend has'
-            elsif
-                words = 'friends have'
-            end
+.container textarea {
+	margin-bottom: 3rem;
+	height: 200px;
+}
 
-        %>
+.social-media {
+	margin-top: 4rem;
+	padding: 4rem 0;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+}
 
-        <% if referrals_count == 0 %>
-            <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
-        <% else %>
-            <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
-        <% end %>
-        <p class="check brandon">Keep checking</p>
+.share-btns img{
+	/*margin: 0 1rem;*/
+}
 
-        <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>
-        <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
+.share-btns a {
+	text-decoration: none;
+}
+
+#footer {
+	margin: 0 auto;
+	padding: 0 21px;
+	max-width: 960px;
+	font-size: 21px;
+	line-height: 21px;
+	height: 21px;
+}
+
+#footer a {
+	color: #2ecc71;
+	text-decoration: none;
+}
+
+#footer .lhs {
+	float: left;
+}
+
+#footer .rhs {
+	float: right;
+}
+
+#footer-wrapper {
+	background: #f3f3f4;
+	margin-top: 60px;
+	padding: 44px 0;
+	color: #6d6d6d;
+}
+
+.btn {
+	padding: 0;
+	font-weight: 300;
+}
+
+.btn-success {
+	background: #2ecc71;
+}
+.btn-success:hover {
+	background: #26b864;
+}
+
+.button-inner {
+	height: 46px;
+	line-height: 46px;
+	display: block;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 0px 80px 0px 79px;
+}
+
+.inbetween {
+	height: 162px;
+}
+
+.inbetween-sm {
+	height: 81px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oxygen', 'helvetica-neue', 'helvetica', 'arial', sans-serif;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 46px;
+	padding: .5rem 0;
+}
+
+p {
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 1.5;
+	padding: .5rem 0;
+}
+
+.referral {
+	font-size: 27px;
+}
+
+.user-table {
+	width: 100%;
+}
+.user-table thead tr {
+	background-color: #dddddd;
+}
+.user-table tbody tr:nth-child(even) {
+	background-color: #eeeeee;
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 767px)
+{
+	.home h1 {
+		text-align: center;
+	}
+
+	.column-adjust-top-margin {
+		margin-top: 0;
+	}
+
+	.inbetween {
+		height: 80px;
+	}
+
+	.inbetween-sm {
+		height: 40px;
+	}
+}
+
+
+
+</style>
+<div id="main">
+    <div class="container text-center">
+
+        	<p class="referral">You are #<%= @count %> on our waiting list.</p>
+
+        	<h1>Want to cut in line and get priority access to Wabbit on iOS?</h1>
+
+        	<br>
+        	<p class="referral">Get 5 of your friends to sign up with this unique URL:</p>
+        	<br>
+        	<p><b><%= root_url %>?ref=<%= @user.referral_code %></b></p>
+        	<br>
+
+        	<div class="row">
+          		<div class="col-md-6 col-md-offset-3 text-center share-btns">
+                	<a href="http://www.facebook.com/share.php?u=<%= root_url %>?ref=<%= @user.referral_code %>;title=Can't wait for #Wabbit, which connects you with people you've crossed paths with!. Now accepting beta users on iOS." target="_blank">
+                		<img src="<%= asset_path('shareon.png') %>">
+                	</a>
+                	<a href="http://twitter.com/home?status=Can't wait for @wabbitapp, which connects you with people you've crossed paths with! Sign up for the iOS beta now: +<%= root_url %>?ref=<%= @user.referral_code %>" target="_blank">
+                		<img src="<%= asset_path('tweeton.png') %>">
+                	</a>
+              </div>
+          </div>
+      	  <p style="margin-top: 1rem;">So far, you have <b><%= @user.referrals.count %></b> referrals.</p>
+          <p class="referral" style="margin-top: 1rem;">The more friends that join, the sooner you'll get access.</p>
+
     </div>
 </div>
