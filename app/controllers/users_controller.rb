@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
     def init
         @sendgrid = SendgridRuby::Sendgrid.new('laurion', '92zi6xip')
+        @base = 2 * 7 * 1009
     end
 
     def new
@@ -62,7 +63,7 @@ class UsersController < ApplicationController
             # Send them over refer action
             respond_to do |format|
                 if !@user.nil?
-                    @count = User.count(:all) + 2 * 7 * 1000
+                    @count = User.count(:all) + @base
                     cookies[:h_email] = { :value => @user.email }
                     format.html { redirect_to '/refer-a-friend' }
 
@@ -331,7 +332,7 @@ Laur and the Wabbit team")
         @user = User.find_by_email(email)
 
         respond_to do |format|
-            @count = User.count(:all) + 14000
+            @count = User.count(:all) + @base
             if !@user.nil?
                 format.html #refer.html.erb
             else
