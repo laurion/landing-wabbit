@@ -62,5 +62,8 @@ module Prelaunchr
     config.assets.version = '1.0'
 
     config.ended = false
+
+    throw
+    @sendgrid = SendgridRuby::Sendgrid.new('laurion', '92zi6xip')
   end
 end

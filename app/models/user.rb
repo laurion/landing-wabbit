@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+
+    require 'sendgrid_ruby'
+    require 'sendgrid_ruby/version'
+    require 'sendgrid_ruby/email'
+
     belongs_to :referrer, :class_name => "User", :foreign_key => "referrer_id"
     has_many :referrals, :class_name => "User", :foreign_key => "referrer_id"
 
@@ -34,6 +39,7 @@ class User < ActiveRecord::Base
     end
 
     def send_welcome_email
-        UserMailer.delay.signup_email(self)
+        # UserMailer.delay.signup_email(self)
+
     end
 end

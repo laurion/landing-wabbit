@@ -1,7 +1,13 @@
 class ApplicationController < ActionController::Base
     protect_from_forgery
 
+    require 'sendgrid_ruby'
+
     before_filter :ref_to_cookie
+
+    # def init
+    #   @sendgrid = SendgridRuby::Sendgrid.new('laurion', '92zi6xip')
+    # end
 
     def mobile_device?
         if session[:mobile_param]

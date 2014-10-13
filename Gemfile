@@ -30,6 +30,14 @@ gem 'delayed_job_active_record'
 
 gem 'unicorn'
 
+gem 'sendgrid_ruby'
+
+group :development do
+  gem "better_errors"
+end
+
+gem "binding_of_caller"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

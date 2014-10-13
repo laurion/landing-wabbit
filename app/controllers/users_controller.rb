@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
 
+    require 'sendgrid_ruby'
+    require 'sendgrid_ruby/version'
+    require 'sendgrid_ruby/email'
+
     def new
         @bodyId = 'home'
         @is_mobile = mobile_device?
@@ -57,6 +61,15 @@ class UsersController < ApplicationController
             if !@user.nil?
                 cookies[:h_email] = { :value => @user.email }
                 format.html { redirect_to '/refer-a-friend' }
+
+                mail = SendgridRuby::Email.new
+                mail.add_to(@user.email)
+                mail.set_from('contact@getwabbit.com')
+                mail.set_subject('Welcome to Wabbit!')
+                mail.set_text('Welcome!')
+                mail.set_html('<strong>Welcome!</strong>')
+
+                response = @sendgrid.send(mail)
             else
                 format.html { redirect_to root_path, :alert => "Something went wrong!" }
             end
