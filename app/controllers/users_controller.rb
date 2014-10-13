@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
+    before_filter :init
 
     require 'sendgrid_ruby'
     require 'sendgrid_ruby/version'
     require 'sendgrid_ruby/email'
+
+    def init
+        @sendgrid = SendgridRuby::Sendgrid.new('laurion', '92zi6xip')
+    end
 
     def new
         @bodyId = 'home'
