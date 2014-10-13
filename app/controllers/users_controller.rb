@@ -90,6 +90,7 @@ class UsersController < ApplicationController
         @user = User.find_by_email(email)
 
         respond_to do |format|
+            @count = User.count(:all)
             if !@user.nil?
                 format.html #refer.html.erb
             else
