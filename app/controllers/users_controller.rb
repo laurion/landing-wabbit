@@ -59,26 +59,48 @@ class UsersController < ApplicationController
             end
 
             @user.save
-        end
+            # Send them over refer action
+            respond_to do |format|
+                if !@user.nil?
+                    cookies[:h_email] = { :value => @user.email }
+                    format.html { redirect_to '/refer-a-friend' }
 
-        # Send them over refer action
-        respond_to do |format|
-            if !@user.nil?
-                cookies[:h_email] = { :value => @user.email }
-                format.html { redirect_to '/refer-a-friend' }
+                    mail = SendgridRuby::Email.new
+                    mail.add_to(@user.email)
+                    mail.set_from('contact@getwabbit.com')
+                    mail.set_subject('Welcome to Wabbit!')
+                    mail.set_text('Welcome!')
+                    mail.set_html('<strong>Welcome!</strong><p> Share your unique referral url: '+ root_url + '?ref=' + @user.referral_code)
 
-                mail = SendgridRuby::Email.new
-                mail.add_to(@user.email)
-                mail.set_from('contact@getwabbit.com')
-                mail.set_subject('Welcome to Wabbit!')
-                mail.set_text('Welcome!')
-                mail.set_html('<strong>Welcome!</strong>')
-
-                response = @sendgrid.send(mail)
-            else
-                format.html { redirect_to root_path, :alert => "Something went wrong!" }
+                    response = @sendgrid.send(mail)
+                else
+                    format.html { redirect_to root_path, :alert => "Something went wrong!" }
+                end
+            end
+        else
+            respond_to do |format|
+                format.html { redirect_to root_path, :alert => "Already signed up!" }
             end
         end
+
+        # # Send them over refer action
+        # respond_to do |format|
+        #     if !@user.nil?
+        #         cookies[:h_email] = { :value => @user.email }
+        #         format.html { redirect_to '/refer-a-friend' }
+        #
+        #         mail = SendgridRuby::Email.new
+        #         mail.add_to(@user.email)
+        #         mail.set_from('contact@getwabbit.com')
+        #         mail.set_subject('Welcome to Wabbit!')
+        #         mail.set_text('Welcome!')
+        #         mail.set_html('<strong>Welcome!</strong>')
+        #
+        #         response = @sendgrid.send(mail)
+        #     else
+        #         format.html { redirect_to root_path, :alert => "Something went wrong!" }
+        #     end
+        # end
     end
 
     def refer
@@ -113,8 +135,8 @@ class UsersController < ApplicationController
         if !Rails.application.config.ended
             email = cookies[:h_email]
             if email and !User.find_by_email(email).nil?
-                redirect_to '/refer-a-friend'
-            else
+            #     redirect_to '/refer-a-friend'
+            # else
                 cookies.delete :h_email
             end
         end
