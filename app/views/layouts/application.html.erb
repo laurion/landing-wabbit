@@ -31,34 +31,34 @@
         link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.css')
         link(rel='stylesheet', href='bower_components/fontawesome/css/font-awesome.css')
         // endbower
-        link(rel="stylesheet", href="css/main.css")
+        link(rel="stylesheet", href
         // endbuild -->
 
         <!-- CSS Files comes here -->
-        <link href="css/bootstrap.css" rel="stylesheet" media="screen">
-        <link href="css/style.css" rel="stylesheet" media="screen">
-        <link href="css/animate.css" rel="stylesheet" media="screen">
-        <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-        <link href="css/owl.theme.css" rel="stylesheet" media="screen">
-        <link href="css/nivo-lightbox.css" rel="stylesheet" media="screen">
-        <link href="css/nivo_lightbox_themes/default/default.css" rel="stylesheet" media="screen">
-        <link href="css/colors/green.css" rel="stylesheet" media="screen">
-        <link href="css/responsive.css" rel="stylesheet" media="screen">
+        <link href="<%= asset_path('bootstrap.css') %>" rel="stylesheet" media="screen">
+        <link href="<%= asset_path('style.css') %>" rel="stylesheet" media="screen">
+        <link href="<%= asset_path('animate.css') %>" rel="stylesheet" media="screen">
+        <link href="<%= asset_path('owl.carousel.css') %>" rel="stylesheet" media="screen">
+        <link href="<%= asset_path('owl.theme.css') %>" rel="stylesheet" media="screen">
+        <link href="<%= asset_path('nivo-lightbox.css') %>" rel="stylesheet" media="screen">
+        <link href="<%= asset_path('nivo_lightbox_themes/default/default.css') %>" rel="stylesheet" media="screen">
+        <link href="<%= asset_path('colors/green.css') %>" rel="stylesheet" media="screen">
+        <link href="<%= asset_path('responsive.css') %>" rel="stylesheet" media="screen">
 
         <!-- Google fonts -->
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic" rel="stylesheet" type="text/css">
 
         <!-- Modernizer and IE specyfic files -->
-        <script src="js/modernizr.custom.js"></script>
+        <script src="<%= asset_path('modernizr.custom.js') %>"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-          <script src="js/html5shiv.js"></script>
-          <script src="js/respond.min.js"></script>
+          <script src="<%= asset_path('html5shiv.js') %>"></script>
+          <script src="<%= asset_path('respond.min.js') %>"></script>
         <![endif]-->
 
         <!--[if IE 9]>
-         <link href="css/ie.css" rel="stylesheet" media="screen">
+         <link href="<%= asset_path('ie.css') %>" rel="stylesheet" media="screen">
         <![endif]-->
 
         <!--[if IE 9]>
@@ -2136,24 +2136,26 @@
 
 
         <!-- Switcher Only -->
-        <link rel="stylesheet" id="switcher-css" type="text/css" href="css/switcher.css" media="all" />
-      Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" id="switcher-css" type="text/css" href="<%= asset_path('switcher.css') %>" media="all" />
+        <link href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800" rel="stylesheet" type="text/css">
         <!-- END Switcher Styles -->
 
+
         <!-- Demo Examples -->
-        <link rel="alternate stylesheet" type="text/css" href="css/colors/yellow.css" title="yellow" media="all" />
-        <link rel="alternate stylesheet" type="text/css" href="css/colors/orange.css" title="orange" media="all" />
-        <link rel="alternate stylesheet" type="text/css" href="css/colors/red.css" title="red" media="all" />
-        <link rel="alternate stylesheet" type="text/css" href="css/colors/vine.css" title="vine" media="all" />
-        <link rel="alternate stylesheet" type="text/css" href="css/colors/violet.css" title="violet" media="all" />
-        <link rel="alternate stylesheet" type="text/css" href="css/colors/blue.css" title="blue" media="all" />
-        <link rel="alternate stylesheet" type="text/css" href="css/colors/torquoise.css" title="torquoise" media="all" />
-        <link rel="alternate stylesheet" type="text/css" href="css/colors/green.css" title="green" media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="<%= asset_path('colors/yellow.css') %>" title="yellow" media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="<%= asset_path('colors/orange.css') %>" title="orange" media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="<%= asset_path('colors/red.css') %>" title="red" media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="<%= asset_path('colors/vine.css') %>" title="vine" media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="<%= asset_path('colors/violet.css') %>" title="violet" media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="<%= asset_path('colors/blue.css') %>" title="blue" media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="<%= asset_path('colors/torquoise.css') %>" title="torquoise" media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="<%= asset_path('colors/green.css') %>" title="green" media="all" />
         <!-- END Demo Examples -->
 
         <%= csrf_meta_tags %>
 </head>
-<body id="<%= @bodyId %>">
+<body>
+
 
 <%= yield %>
 

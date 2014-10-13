@@ -49,4 +49,6 @@ Prelaunchr::Application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   # sendgrid = SendgridRuby::Sendgrid.new('username', 'password')
+
+  config.serve_static_assets = true
 end
