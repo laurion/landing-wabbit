@@ -22,11 +22,11 @@
     <div class="row">
         <div id="homescreen" class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
              <div id="logo"><a href="#home"><img class="wabbit-logo" src="<%= asset_path('logo.png') %>" alt="logo"></a></div>
-             <div id="slogan"><h1>Connect with the people you've crossed paths with.</h1></div>
-             <a href="#features_3" class="cta1" id="button_more">Learn More</a>
-             <a href="#" class="cta2" id="button_download">Download Now</a>
+             <div id="slogan"><h1>Connect with the people you've crossed paths with</h1></div>
+             <a href="#footer" class="cta1" id="button_more">Get on iOS</a>
+             <a href="https://play.google.com/store/apps/details?id=com.wabbit.messenger" class="cta2" id="button_download" target="_blank">Get on Android</a>
              <div id="play-button">
-               <a href="https://www.youtube.com/watch?v=Lgz7QzV5oJ0&autoplay=1" id="playvideo" class="hero-container__play-btn">Play video</a>
+               <a href="https://www.youtube.com/watch?v=Lgz7QzV5oJ0&autoplay=1" id="playvideo" class="hero-container__play-btn" target="_blank">Play video</a>
              </div>
         </div> <div class="clearfix"></div>
     </div>
@@ -35,6 +35,7 @@
 <div id="video-fallback"></div>
 <div id="video-container">
     <video autoplay loop class="fillWidth" width="100%">
+        <source src="<%= asset_path('video.m4v') %>" type="video/m4v"/>
         <source src="<%= asset_path('video.mov') %>" type="video/mp4"/>
         <source src="<%= asset_path('video.ogg') %>" type="video/ogg"/>
         <source src="<%= asset_path('video.webm') %>" type="video/webm"/>
