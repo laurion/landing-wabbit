@@ -5,10 +5,6 @@ class ApplicationController < ActionController::Base
 
     before_filter :ref_to_cookie
 
-    # def init
-    #   @sendgrid = SendgridRuby::Sendgrid.new('laurion', '92zi6xip')
-    # end
-
     def mobile_device?
         if session[:mobile_param]
             session[:mobile_param] == "1"
