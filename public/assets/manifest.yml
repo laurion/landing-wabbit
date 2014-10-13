@@ -1,8 +1,6 @@
 ---
-around-me-screen.png: around-me-screen-d6d3ce15ad5a4ffd2380749744612797.png
-around-me-screen/index.png: around-me-screen-d6d3ce15ad5a4ffd2380749744612797.png
-icons.svg: icons-9c3098c4fabc73323b052dfff24e23f5.svg
-icons/index.svg: icons-9c3098c4fabc73323b052dfff24e23f5.svg
+around-me-screen.png: around-me-screen-d6774c986fd94879887885b5217d7d6f.png
+around-me-screen/index.png: around-me-screen-d6774c986fd94879887885b5217d7d6f.png
 logo.png: logo-1df402176deb0a9335fcf6df3dd687ef.png
 logo/index.png: logo-1df402176deb0a9335fcf6df3dd687ef.png
 pattern.png: pattern-ba9231b16fff97d065006d2ec4e7b9bc.png
@@ -11,36 +9,12 @@ play-btn.svg: play-btn-cc4c461fe13ab09b23bc13a0165209db.svg
 play-btn/index.svg: play-btn-cc4c461fe13ab09b23bc13a0165209db.svg
 shareon.png: shareon-b84f80118d9958d3f28df94aa5fc884d.png
 shareon/index.png: shareon-b84f80118d9958d3f28df94aa5fc884d.png
-switcher/blue.jpg: switcher/blue-e9e7a78cb14dc2f50ba4dbe311b4b1c0.jpg
-switcher/blue/index.jpg: switcher/blue-e9e7a78cb14dc2f50ba4dbe311b4b1c0.jpg
-switcher/color.png: switcher/color-e7ca03c00a322287fd78a3d64c0c8217.png
-switcher/color/index.png: switcher/color-e7ca03c00a322287fd78a3d64c0c8217.png
-switcher/green.jpg: switcher/green-f6c7c91f05cde2bd7d09902633c99ce3.jpg
-switcher/green/index.jpg: switcher/green-f6c7c91f05cde2bd7d09902633c99ce3.jpg
-switcher/img.jpg: switcher/img-0e4a56c43f3d6b5937c1e51da2718ec5.jpg
-switcher/img/index.jpg: switcher/img-0e4a56c43f3d6b5937c1e51da2718ec5.jpg
-switcher/orange.jpg: switcher/orange-92494032d08e16baafaba4af75862ca4.jpg
-switcher/orange/index.jpg: switcher/orange-92494032d08e16baafaba4af75862ca4.jpg
-switcher/red.jpg: switcher/red-369df3da174cfdfda1785c1c450cc413.jpg
-switcher/red/index.jpg: switcher/red-369df3da174cfdfda1785c1c450cc413.jpg
-switcher/solid.jpg: switcher/solid-50aaed1215d4b0265f25dac1472750b6.jpg
-switcher/solid/index.jpg: switcher/solid-50aaed1215d4b0265f25dac1472750b6.jpg
-switcher/torquoise.jpg: switcher/torquoise-930531f051662a42235bd1ed07bedd86.jpg
-switcher/torquoise/index.jpg: switcher/torquoise-930531f051662a42235bd1ed07bedd86.jpg
-switcher/video.jpg: switcher/video-cac28c9ab4ce08ac34186383914b747a.jpg
-switcher/video/index.jpg: switcher/video-cac28c9ab4ce08ac34186383914b747a.jpg
-switcher/vine.jpg: switcher/vine-7b31072fb9f57310682dcc23f5bdb378.jpg
-switcher/vine/index.jpg: switcher/vine-7b31072fb9f57310682dcc23f5bdb378.jpg
-switcher/violet.jpg: switcher/violet-9f8ea71238bf70ab9752ba2dd39d8eea.jpg
-switcher/violet/index.jpg: switcher/violet-9f8ea71238bf70ab9752ba2dd39d8eea.jpg
-switcher/yellow.jpg: switcher/yellow-612d8ac446087fb3b0754498f4ac4f13.jpg
-switcher/yellow/index.jpg: switcher/yellow-612d8ac446087fb3b0754498f4ac4f13.jpg
 tweeton.png: tweeton-4320a03e662c7c70aa8e7aa607d7c874.png
 tweeton/index.png: tweeton-4320a03e662c7c70aa8e7aa607d7c874.png
 active_admin.js: active_admin-76495de5f9a0a6af340457a8d11e1130.js
 active_admin/index.js: active_admin-76495de5f9a0a6af340457a8d11e1130.js
-application.js: application-669fc35ba81b3bcacca653b2cbb7f680.js
-application/index.js: application-669fc35ba81b3bcacca653b2cbb7f680.js
+application.js: application-963ceffe7e64563e1ff3a0522715df4f.js
+application/index.js: application-963ceffe7e64563e1ff3a0522715df4f.js
 AjaxLoader.html: AjaxLoader-067e6c014b452c82c1d8245321440280.html
 AjaxLoader/index.html: AjaxLoader-067e6c014b452c82c1d8245321440280.html
 active_admin.css: active_admin-f58fc98e42733be6473403cf53156e11.css
@@ -85,14 +59,18 @@ nivo_lightbox_themes/default/prev@2x.png: nivo_lightbox_themes/default/prev@2x-4
 nivo_lightbox_themes/default/prev@2x/index.png: nivo_lightbox_themes/default/prev@2x-4c949ed7eba075c3d44aeb2859d8b617.png
 reset.css: reset-1b13569e9620782f423d4cd3ce931750.css
 reset/index.css: reset-1b13569e9620782f423d4cd3ce931750.css
+video (stops in the middle).mp4: video (stops in the middle)-7b4c569e90af60f961066a53664d819f.mp4
+video (stops in the middle)/index.mp4: video (stops in the middle)-7b4c569e90af60f961066a53664d819f.mp4
+video android low.mp4: video android low-b456f0b553d229bf0444f1ee5b59487c.mp4
+video android low/index.mp4: video android low-b456f0b553d229bf0444f1ee5b59487c.mp4
+video mobile medium.mp4: video mobile medium-907cd445af7f65acbd5d7d9afd9a8765.mp4
+video mobile medium/index.mp4: video mobile medium-907cd445af7f65acbd5d7d9afd9a8765.mp4
 video.jpg: video-ba90f1a25425a1ed792c0340cffc2104.jpg
 video/index.jpg: video-ba90f1a25425a1ed792c0340cffc2104.jpg
 video.m4v: video-7b4c569e90af60f961066a53664d819f.m4v
 video/index.m4v: video-7b4c569e90af60f961066a53664d819f.m4v
 video.mov: video-c5ef31d7b88cfd1b3b7d4633bf939834.mov
 video/index.mov: video-c5ef31d7b88cfd1b3b7d4633bf939834.mov
-video.mp4: video-7b4c569e90af60f961066a53664d819f.mp4
-video/index.mp4: video-7b4c569e90af60f961066a53664d819f.mp4
 video.ogg: video-a668db5db3966a831b3fbcb101cb9eb8.ogg
 video/index.ogg: video-a668db5db3966a831b3fbcb101cb9eb8.ogg
 video.png: video-bf32322b17565d0a89af89d03e96da2b.png

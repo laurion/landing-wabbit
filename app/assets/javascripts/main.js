@@ -113,23 +113,23 @@
     * Carousel
     */
     Carousel: function() {
-        $('#owl-gallery').owlCarousel({
-            items : 5,
-            itemsDesktop : [1199,5],
-            itemsDesktopSmall : [980,5],
-            itemsTablet: [768,5],
-            itemsTabletSmall: [550,2],
-            itemsMobile : [480,2],
-        });
+        // $('#owl-gallery').owlCarousel({
+        //     items : 5,
+        //     itemsDesktop : [1199,5],
+        //     itemsDesktopSmall : [980,5],
+        //     itemsTablet: [768,5],
+        //     itemsTabletSmall: [550,2],
+        //     itemsMobile : [480,2],
+        // });
     },
 
     /**
     * Nivo Lightbox
     */
     Lightbox: function() {
-        $('#owl-gallery a').nivoLightbox({
-            effect: 'fall',                             // The effect to use when showing the lightbox
-        });
+        // $('#owl-gallery a').nivoLightbox({
+        //     effect: 'fall',                             // The effect to use when showing the lightbox
+        // });
     },
 
 
