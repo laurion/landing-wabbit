@@ -1,4 +1,207 @@
-<div class="hero">
+
+<!--###############################-->
+<!--PRELOADER #####################-->
+<!--###############################-->
+
+<div id="preloader">
+    <div id="status">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--###############################-->
+<!--HOME ##########################-->
+<!--###############################-->
+
+<section id="home">
+<div class="container">
+    <div class="row">
+        <div id="homescreen" class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+             <div id="logo"><a href="#home"><img class="wabbit-logo" src="images/logo.png" alt="logo"></a></div>
+             <div id="slogan"><h1>Connect with the people you've crossed paths with.</h1></div>
+             <a href="#features_3" class="cta1" id="button_more">Learn More</a>
+             <a href="#" class="cta2" id="button_download">Download Now</a>
+             <div id="play-button">
+               <a href="https://www.youtube.com/watch?v=Lgz7QzV5oJ0&autoplay=1" id="playvideo" class="hero-container__play-btn">Play video</a>
+             </div>
+        </div> <div class="clearfix"></div>
+    </div>
+</div>
+<div id="video_pattern"></div>
+<div id="video-fallback"></div>
+<div id="video-container">
+    <video autoplay loop class="fillWidth" width="896" height="504">
+        <source src="video/video.mov" type="video/mp4"/>
+        <source src="video/video.ogg" type="video/ogg"/>
+        <source src="video/video.webm" type="video/webm"/>
+        Your browser does not support the video tag. I suggest you upgrade your browser.
+    </video>
+</div><!-- end video-container -->
+</section>
+
+
+<!--###############################-->
+<!--Features 3 ####################-->
+<!--###############################-->
+
+<section id="features_3">
+    <div class="container">
+        <div class="row" id="features_3_intro">
+            <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" >
+                <h2>Free Android app</h2>
+                <p>Connect with the one you locked eyes with earlier in the day and didn't get a chance to talk to.
+                </p>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-sm-4 col-md-4 ol-lg-4" id="features_3_content_left">
+
+                <div class="feature">
+                    <h4>You see someone in real life</h4>
+                    <p>On public transportation, on campus, at a party or at the gym.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <h4>There's a spark</h4>
+                    <p>When you make eye contact with a someone you like and you know that if you had talked to them there would be a connection.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4 col-md-4 ol-lg-4" id="features_3_content_center">
+                <img src="images/around-me-screen.png" class="img-responsive" id="features3_image" alt="img">
+            </div>
+
+            <div class="col-sm-4 col-md-4 ol-lg-4" id="features_3_content_right">
+
+                <div class="feature">
+                    <h4>You look them up on Wabbit</h4>
+                    <p>Browse through the list of people in your close proximity until you find the one you wanted to talk to.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <h4>Say hi</h4>
+                    <p>It’s how great stories start.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!--Arrows - single arrow wersion-->
+<section class="arrows_box">
+    <div class="arrow_single">
+        <svg viewBox="0 0 32 32" class="arrow_up" id="gallery_arrow_back">
+            <use xlink:href="#left-arrow"></use></svg>
+    </div>
+</section>
+<!--######-->
+
+
+<!--###############################-->
+<!--Newsletter and Footer #########-->
+<!--###############################-->
+
+<section id="footer">
+    <div class="container">
+        <div class="row" id="newsletter">
+            <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" >
+
+                <h2>Be the first to know</h2>
+                <p>We'll slowly roll out the iOS version and create hotspots in other areas.
+                </p>
+
+                <div id="newsletter_form">
+                    <p class="byline brandon">Be the first to know</p>
+                    <%= form_for @user, :url => { :action => "create" } do |f| %>
+                        <%= f.text_field :email, :placeholder => "Enter your e-mail address...", :class => "subscribe-input", :name => "email" %>
+                        <button type="submit" class="subscribe-submit">Get access</button>
+                    <% end %>
+                </div>
+                <div id="preview"></div>
+
+            </div>
+        </div>
+
+       <div class="row">
+           <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" id="share">
+
+               <div id="social_icons">
+                   <ul>
+                       <li><svg viewBox="0 0 32 32" id="fb_icon" onclick="location.href='https://facebook.com/wabbitmessenger'"><use xlink:href="#facebook"></use></svg></li>
+                       <li><svg viewBox="0 0 32 32" id="tw_icon" onclick="location.href='https://twitter.com/wabbitapp''"><use xlink:href="#twitter"></use></svg></li>
+                   </ul>
+               </div>
+
+               <p>Copyright &copy; 2014 Wabbit</p>
+
+           </div>
+       </div>
+
+    </div>
+</section>
+
+<!-- ADD Switcher -->
+<!-- END Switcher -->
+
+<!-- JavaScript plugins comes here -->
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/main.js"></script>
+<script src="js/retina.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript">
+    $('document').ready(function(){
+            $('#playvideo').fancybox({
+    					  openEffect : 'none',
+    					  closeEffect : 'none',
+    	  				prevEffect : 'none',
+    	  				nextEffect : 'none',
+    	  				arrows : false,
+    	  				helpers : {
+    	  					media : {},
+    	  					buttons : {}
+    	  			  }
+    	  		 });
+            $('#subscribe-form').ajaxForm( {
+            target: '#preview',
+            success: function() {
+                  $('#subscribe-form').slideUp('slow');
+                  $('#preview').css({"opacity":"1"});
+                }
+            });
+        });
+</script>
+<script>
+    var url ='images/icons.svg';
+    var c=new XMLHttpRequest(); c.open('GET.html', url, false); c.setRequestHeader('Content-Type', 'text/xml'); c.send();
+    document.body.insertBefore(c.responseXML.firstChild, document.body.firstChild)
+</script>
+
+<!-- Demo Switcher JS -->
+<script type="text/javascript" src="js/fswit.js"></script>
+
+<!-- <div class="hero">
     <p class="large brandon">Harry&#8217;s is live</p>
     <p class="small brandon">Respecting the Face and Wallet<br>Since Like...Right Now.</p>
 </div>
@@ -17,4 +220,4 @@
             <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
         <% end %>
     <% end %>
-</div>
+</div> -->
