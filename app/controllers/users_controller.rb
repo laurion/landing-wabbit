@@ -71,6 +71,11 @@ class UsersController < ApplicationController
                     mail.add_to(@user.email)
                     mail.set_from('laur@getwabbit.com')
                     mail.set_subject('Welcome to Wabbit!')
+
+                    ref_code = @user.referral_code
+                    if !ref_code
+                      ref_code = ""
+                    end
                     mail.set_text("Welcome, Wabbit-er!
 
 Thank you for signing up. We're working hard to release Wabbit on iOS!
@@ -80,7 +85,7 @@ You are #" + @count.to_s + " on our waiting list.
 If you want to cut in line and get priority access to our iOS version, get your friends to sign up with this unique URL:
 
 
-" + root_url + "?ref=" + @user.referral_code + "
+" + root_url + "?ref=" + ref_code + "
 
 
 The more friends that join, the sooner you'll get access.
@@ -270,15 +275,15 @@ Laur and the Wabbit team")
 
                                   <p class=\"referral\">If you want to cut in line and get priority access to our iOS version, get your friends to sign up with this unique URL:</p>
                                   <br>
-                                  <p><b>http://getwabbit.com/?ref=" + @user.referral_code + "</b></p>
+                                  <p><b>http://getwabbit.com/?ref=" + ref_code + "</b></p>
                                   <br>
                                   <p class=\"referral\"\">The more friends that join, the sooner you'll get access.</p>
                                   <div class=\"row\">
                                       <div class=\"col-md-6 col-md-offset-3 text-center share-btns\">
-                                          <a href=\"https://www.facebook.com/dialog/share?app_id=280621415419777&display=popup&href=" + root_url + "?ref=" + @user.referral_code + "&redirect_uri=http://getwabbit.com\">
+                                          <a href=\"https://www.facebook.com/dialog/share?app_id=280621415419777&display=popup&href=" + root_url + "?ref=" + ref_code + "&redirect_uri=http://getwabbit.com\">
                                             <img src=\"http://getwabbit/assets/shareon.png\">
                                           </a>
-                                          <a href=\"http://twitter.com/home?status=Can't wait for @wabbitapp, which connects you with people you've crossed paths with! Sign up for the iOS beta now: " + root_url + "?ref=" + @user.referral_code + " target=\"_blank\">
+                                          <a href=\"http://twitter.com/home?status=Can't wait for @wabbitapp, which connects you with people you've crossed paths with! Sign up for the iOS beta now: " + root_url + "?ref=" + ref_code + " target=\"_blank\">
                                             <img src=\"http://getwabbit/assets/tweeton.png\">
                                           </a>
                                       </div>
