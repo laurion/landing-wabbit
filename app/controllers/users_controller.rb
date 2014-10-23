@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     def init
         @sendgrid = SendgridRuby::Sendgrid.new('laurion', '92zi6xip')
-        @base = 2 * 7 * 1869
+        @base = 2 * 7 * 2069
     end
 
     def new
