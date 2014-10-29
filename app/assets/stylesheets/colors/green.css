@@ -11,20 +11,29 @@ body {
 }
 
 .cta1 {
-    background-color:black;
+    /*background-color:black;*/
+    background-image: url("../app-store-coming-soon.png");
+    background-size: cover;
+    height: 3.1rem;
 }
 
 
 
 
 
-.subscribe-submit, 
-.subscribe-submit:active, 
+.subscribe-submit,
+.subscribe-submit:active,
 .spinner > div,
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span,
 .cta2 {
     background-color: #a7cb00;
+}
+.google-play{
+    background-color: black;
+    background-image: url("../google-play.png");
+    background-size: cover;
+    height: 3.1rem;
 }
 
 
@@ -33,10 +42,10 @@ body {
 
 
 #fb_icon:hover,
-#tw_icon:hover, 
-#in_icon:hover, 
-#g_icon:hover, 
-#pin_icon:hover, 
+#tw_icon:hover,
+#in_icon:hover,
+#g_icon:hover,
+#pin_icon:hover,
 #fli_icon:hover,
 .services_icon {
     fill:#a7cb00;
@@ -46,11 +55,11 @@ body {
 
 
 
-#fb_icon, 
-#tw_icon, 
-#in_icon, 
-#g_icon, 
-#pin_icon, 
+#fb_icon,
+#tw_icon,
+#in_icon,
+#g_icon,
+#pin_icon,
 #fli_icon {
     fill: rgba(255,255,255,0.5);
 }
@@ -92,5 +101,3 @@ h4 {
 .owl-theme .owl-controls .owl-page span{
 	background-color: #d8d8d8;
 }
-
-
