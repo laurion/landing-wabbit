@@ -64,6 +64,6 @@ module Prelaunchr
     config.ended = false
 
     # throw
-    @sendgrid = SendgridRuby::Sendgrid.new('laurion', '92zi6xip')
+    @sendgrid = SendgridRuby::Sendgrid.new(ENV['SENDGRID_USER'], ENV['SENDGRID_PASS'])
   end
 end
