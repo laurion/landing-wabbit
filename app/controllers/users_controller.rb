@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     require 'sendgrid_ruby/email'
 
     def init
-        @sendgrid = SendgridRuby::Sendgrid.new('laurion', '92zi6xip')
+        @sendgrid = SendgridRuby::Sendgrid.new(ENV['SENDGRID_USER'], ENV['SENDGRID_PASS'])
         @base = 2 * 7 * 2469
     end
 
